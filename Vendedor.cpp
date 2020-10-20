@@ -2,13 +2,12 @@
 #include "Empregado.hpp"
 
 class Vendedor : public Empregado {
-
-  public:
-    std::string nome;  	  
-	
+  public:  
 	double quotaTotalAnual() {
-	  return quotaMensalVendas * 12;
+	  return getQuotaMensalVendas() * 12;
 	}
-	
+	void printQuotaTotalAnual(){
+		std::cout << "Quota vendas: " << quotaTotalAnual() << std::endl; 
+	}
 };
 
